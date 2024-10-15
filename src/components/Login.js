@@ -1,5 +1,5 @@
 import { useState, memo, useContext } from 'react'
-import { loggedInUser } from '../../App';
+import { loggedInUser } from '../App';
 
 function LoginPopup({ handleLoginSubmit }) {
 

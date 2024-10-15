@@ -4,8 +4,7 @@ import Cards from './components/Cards';
 import Carousel from './components/Carousel';
 import Header from './components/Header';
 import Cart from './components/Cart';
-import Footer from './components/Footer';
-import LoginPopup from './components/LoginPopup';
+import LoginPopup from './components/Login';
 
 import "./App.css";
 
@@ -32,7 +31,6 @@ function App() {
   const [quantityProduct, setQuantityProduct] = useState(0);
   const [products, setProducts] = useState();
 
-  console.log(user);
 
   const sumQuantityProduct = (arr) => {
     return arr.reduce((quantity, item) => {
@@ -102,7 +100,6 @@ function App() {
         }
       });
       const data = await res.json();
-      console.log('data', data);
       setUser(data.data);
     } catch (error) {
       console.log(error);
@@ -116,13 +113,11 @@ function App() {
         <Header brand='Pizza House' handleOnClick={quantityProduct} />
         {/* Carousel */}
         <Carousel images={images}
-          title='Neapolian Pizza'
+          title='Neapolian Pizza'z
           description='If you are looking for a traditional pizza the Neapolian is the best option!'
         />
         {/* Our Menu */}
         <Cards label='Our Menu' products={products} handleBuy={handleBuy} />
-        {/* Footer */}
-        <Footer />
         {/* Cart Popup */}
         <Cart cart={cart}
           handleIncrease={handleIncrease}

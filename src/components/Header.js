@@ -1,5 +1,5 @@
 import { useContext } from 'react';
-import { loggedInUser } from '../../App';
+import { loggedInUser } from '../App';
 import { FiSearch } from "react-icons/fi";
 
 function Header({ brand, handleOnClick }) {
@@ -29,7 +29,7 @@ function Header({ brand, handleOnClick }) {
                     <button className="btn btn-outline-success my-2 my-sm-0" type="submit"><FiSearch className="search-icon" /></button>
                 </form>
                 <button type="button" className="btn btn-primary ml-2" data-toggle="modal" data-target="#exampleModal">
-                    Items: <span className="badge badge-secondary badge-dark">{handleOnClick}</span>
+                    Oders now: <span className="badge badge-secondary badge-dark">{handleOnClick}</span>
                 </button>
                 {user ?
                     <button type="button" className="btn btn-dark text-light bg-transparent ml-2 ">{`${user.name}, ${user.age}`}</button>
